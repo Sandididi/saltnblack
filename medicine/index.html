@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="webcam.css">
+    <link rel="icon" href="../All_img/fav_icon.png">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <title>Ho-I-SING.Medicine</title>
+</head>
+<body>
+    <div class="texture"></div>
+    <div class="content">
+        
+        <div class="scrollIcon">
+            <div class="mousey">
+                <div class="scroller"></div>
+            </div>
+        </div>
+        <a href="https://saltnblack.net/appointment_page/"><img id="nextpg" src="../All_img/next.svg"></a>
+        <div class="clock">
+            <div class="hms"></div>
+            <div class="ampm"></div>
+        </div>
+        
+        <div class="webcam">
+            <div class="webcamtop">
+                <div class="nav_X">
+                    <div style="transform: rotate(45deg);" class="cross-line"></div>
+					<div style="transform: rotate(-45deg);" class="cross-line"></div>
+                </div>
+            </div>
+            <video class="cam" id="video" autoplay></video>
+        </div>
+        <div class="cover">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+        <div class="BgFont">
+            <h1>不想被看到的都已經隱藏好了</h1>
+            <img id="bg_font01" src="../All_img/bg_font01.svg">
+            <h1 id="bg_font02">時間在這裡凍結</h1>
+            <h1 id="bg_font03">疫情把我們隔開來</h1>
+
+            <h3 id="bg_font04">不曉得那裡是否同樣下著雨</h3>
+            <h3 id="bg_font05">也如此炎熱</h3>
+            <h3 id="bg_font06">太陽曬得人睜不開眼</h3>
+            <h3 id="bg_font07">偶爾我會想起寬闊的大路</h3>
+            <h3 id="bg_font08">希望你並不是</h3>
+            <h3 id="bg_font09">孤身一人</h3>
+            <h3 id="bg_font10">在這我只有</h3>
+            <h3 id="bg_font11">半睡半醒間</h3>
+            <h3 id="bg_font12">海水映照藍天</h3>
+            <h3 id="bg_font13">記憶似近又彷如隔世</h3>
+            <h3 id="bg_font14">鹹鹹的味道</h3>
+            <h3 id="bg_font15">我時常不確定時間</h3>
+            <h3 id="bg_font16">永不熄滅的燈</h3>
+
+            <div class="endFont"><h4>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;謝謝你的體驗，祝您早日康復。</h4></div>
+        </div>
+        <div class="bgImg">
+            <div class="Imgs pic1">
+                <img src="../All_img/scrollimg01.svg">
+                <img class="empty" src="../All_img/emptyImg.png">
+            </div>
+            <div class="Imgs pic2">
+                <img src="../All_img/scrollimg02.svg">
+                <img class="empty" src="../All_img/emptyImg.png">
+            </div>
+            <div class="Imgs pic3">
+                <img src="../All_img/scrollimg03.svg">
+                <img class="empty" src="../All_img/emptyImg.png">
+            </div>
+            <div class="Imgs pic4">
+                <img src="../All_img/scrollimg04.svg">
+                <img class="empty" src="../All_img/emptyImg.png">
+            </div>
+            <div class="Imgs pic5">
+                <img src="../All_img/scrollimg05.svg">
+                <img class="empty" src="../All_img/emptyImg.png">
+            </div>
+            <div class="Imgs pic6">
+                <img src="../All_img/scrollimg06.svg">
+                <img class="empty" src="../All_img/emptyImg.png">
+            </div>
+            <div class="Imgs pic7">
+                <img src="../All_img/scrollimg07.svg">
+                <img class="empty" src="../All_img/emptyImg.png">
+            </div>
+            <div class="Imgs pic8">
+                <img src="../All_img/scrollimg08.svg">
+                <img class="empty" src="../All_img/emptyImg.png">
+            </div>
+            <div class="Imgs pic9">
+                <img src="../All_img/scrollimg09.svg">
+                <img class="empty" src="../All_img/emptyImg.png">
+            </div>
+            <div class="Imgs pic10">
+                <img src="../All_img/scrollimg10.jpg">
+                <img class="empty" src="../All_img/emptyImg.png">
+            </div>
+            <div class="Imgs pic11">
+                <img src="../All_img/scrollimg11.jpg">
+                <img class="empty" src="../All_img/emptyImg.png">
+            </div>
+            <div class="Imgs pic12">
+                <img src="../All_img/scrollimg12.jpg">
+                <img class="empty" src="../All_img/emptyImg.png">
+            </div>
+            <div class="Imgs pic13">
+                <img src="../All_img/scrollimg13.jpg">
+                <img class="empty" src="../All_img/emptyImg.png">
+            </div>
+            <div class="Imgs pic14">
+                <img src="../All_img/scrollimg14.jpg">
+                <img class="empty" src="../All_img/emptyImg.png">
+            </div>
+            <div class="Imgs pic15">
+                <img src="../All_img/scrollimg15.jpg">
+                <img class="empty" src="../All_img/emptyImg.png">
+            </div>
+            <div class="Imgs pic16">
+                <img src="../All_img/scrollimg16.jpg">
+                <img class="empty" src="../All_img/emptyImg.png">
+            </div>
+            
+        </div>
+
+        
+    </div>
+    <canvas id="camera"></canvas>
+    <script src="camera.js"></script>
+    <script>
+        $("#nextpg").hide();
+        var BGM = document.createElement("audio");
+        BGM.src = "../../All_media/clockBGM.wav";
+        BGM.preload = true;
+        BGM.autoplay = false;
+        BGM.controls = true;
+        BGM.loop = true;
+
+        function myaudio(){
+            BGM.play();
+        }
+        myaudio();
+        setInterval(function(){
+            myaudio()
+        },1000);
+        //time
+        
+        function updateTime(){
+            var dateInfo = new Date();
+            var hr = (dateInfo.getHours()<10) ? "0" + dateInfo.getHours() : dateInfo.getHours(),
+            _min = (dateInfo.getMinutes()<10) ? "0" + dateInfo.getMinutes() : dateInfo.getMinutes();
+            ampm = (dateInfo.getHours()>=12) ? "PM" : "AM";
+
+            var cuttentTime = hr + ":" + _min;
+            document.getElementsByClassName("hms")[0].innerHTML = cuttentTime;
+            document.getElementsByClassName("ampm")[0].innerHTML = ampm;
+        };
+        updateTime();
+        setInterval(function(){
+            updateTime()
+        },1000);
+
+        //cam
+        let cam = document.querySelector('.cam');
+        let icon = document.querySelector('.scrollIcon');
+        let clock = document.querySelector('.clock');
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            icon.style.opacity=2-(value*0.005);
+            cam.style.opacity=-2+value*0.005;
+            // console.log(value);
+            
+            if(value>5550){
+                $(".clock").fadeOut(600, function() {
+                $("#nextpg").fadeIn(400);
+                });
+            }else{
+                $("#nextpg").fadeOut(600, function() {
+                $(".clock").fadeIn(400);
+                });
+            }
+        });
+
+        $(window).scroll(function(){
+            var scroll = $(window).scrollTop();
+            console.log(scroll);
+            if(scroll>4850){
+                $(".left").addClass('gowidth');
+                $(".right").addClass('gowidth');
+                $(".clock").css("color","#24162c");
+            }
+        });
+        
+    
+    </script>
+</body> 
+</html>

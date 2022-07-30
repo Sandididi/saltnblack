@@ -1,0 +1,61 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-color: #4c3659;
+}
+
+.UI {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: screen;
+  opacity: 70%;
+}
+
+.pop_next {
+  position: absolute;
+  z-index: 1;
+  top: 15%;
+  left: 90%;
+  width: 75px;
+  height: 75px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  fill: #c3a0bc;
+  opacity: 0;
+}
+
+.pop_next:hover {
+  width: 85px;
+  height: 85px;
+  fill: #1df528;
+}
+
+@-webkit-keyframes fade-In {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-In {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation: fade-In 1s;
+          animation: fade-In 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+/*# sourceMappingURL=fallinwell.css.map */

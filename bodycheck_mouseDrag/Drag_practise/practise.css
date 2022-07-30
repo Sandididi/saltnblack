@@ -1,0 +1,198 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&family=Special+Elite&display=swap);
+@font-face {
+  font-family: 'Noto Serif TC', serif;
+  src: url(https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&display=swap);
+  unicode-range: U+4E00-9FFF,U+3100-312F;
+}
+
+@font-face {
+  font-family: 'Special Elite', cursive;
+  src: url(https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&family=Special+Elite&display=swap);
+  unicode-range: U+00-024F;
+}
+
+* {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 600;
+}
+
+body {
+  background-image: url(../../All_img/bg_pain2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Texture {
+  position: absolute;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../All_img/noise.gif);
+  mix-blend-mode: multiply;
+  z-index: -2;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.content {
+  width: 90%;
+  height: 90%;
+  -webkit-transform: translateX(-49.5%) translateY(-49%);
+          transform: translateX(-49.5%) translateY(-49%);
+  position: absolute;
+  top: 45%;
+  left: 49.5%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Question {
+  color: #fee;
+  font-size: 26px;
+  font-style: italic;
+  mix-blend-mode: normal;
+  z-index: -6;
+}
+
+.Question2 {
+  color: #fee;
+  font-size: 26px;
+  font-style: italic;
+  z-index: -6;
+}
+
+.Question3 {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  width: auto;
+  color: #fee;
+  font-size: 24px;
+  font-style: italic;
+  line-height: 36px;
+  text-align: left;
+  z-index: -6;
+}
+
+.Question3 p {
+  line-height: 32px;
+  width: 80%;
+}
+
+span {
+  border-bottom: solid  3px #fee;
+}
+
+.dragPath {
+  width: 50px;
+  height: 50px;
+}
+
+.draggable {
+  position: absolute;
+  top: 80%;
+  width: 130px;
+  height: 55px;
+  fill: #7af180;
+  -webkit-filter: drop-shadow(1px 1px 1px rgba(102, 86, 50, 0.5));
+  filter: drop-shadow(1px 1px 1px rgba(102, 86, 50, 0.5));
+}
+
+.draggable:hover {
+  fill: #1df528;
+  -webkit-filter: drop-shadow(5px 5px 2px rgba(102, 86, 50, 0.3));
+  filter: drop-shadow(5px 5px 2px rgba(102, 86, 50, 0.3));
+}
+
+#Ans {
+  left: 25%;
+}
+
+#Wrong {
+  left: 50%;
+}
+
+.nextpg {
+  width: 95px;
+  height: 95px;
+  position: absolute;
+  top: 80%;
+  left: 85%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+  fill: #fee;
+}
+
+.nextpg:hover {
+  width: 125px;
+  height: 125px;
+  fill: #1df528;
+}
+
+.nextpg2 {
+  width: 95px;
+  height: 95px;
+  position: absolute;
+  top: 80%;
+  left: 85%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+  fill: #fee;
+}
+
+.nextpg2:hover {
+  width: 125px;
+  height: 125px;
+  fill: #1df528;
+}
+
+.nextpg3 {
+  width: 95px;
+  height: 95px;
+  position: absolute;
+  top: 80%;
+  left: 85%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+  fill: #fee;
+}
+
+.nextpg3:hover {
+  width: 125px;
+  height: 125px;
+  fill: #1df528;
+}
+
+.SFX_1 {
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 75px;
+  height: 75px;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+
+.SFX_1:hover {
+  width: 85px;
+  height: 85px;
+}
+/*# sourceMappingURL=practise.css.map */

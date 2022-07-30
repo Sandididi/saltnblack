@@ -1,0 +1,241 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&family=Special+Elite&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap);
+@font-face {
+  font-family: 'Noto Serif TC', serif;
+  src: url(https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&display=swap);
+  unicode-range: U+4E00-9FFF,U+3100-312F;
+}
+
+@font-face {
+  font-family: 'Noto Serif', serif;
+  src: url(https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap);
+  unicode-range: U+00-024F;
+}
+
+* {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 600;
+  color: #fee;
+}
+
+body {
+  background-image: url(../All_img/bg_pain.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.all {
+  position: absolute;
+  border: 10px;
+  top: 50%;
+  left: 50%;
+  width: 95%;
+  height: 95%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  z-index: -50;
+}
+
+.Texture {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../All_img/noise.gif);
+  opacity: 0.5;
+  z-index: 300;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.Content {
+  position: absolute;
+  left: 20%;
+  top: -5%;
+}
+
+.dragFont {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 1000px;
+  height: 300px;
+  position: absolute;
+  top: 5%;
+  margin-left: 30px;
+  left: 20%;
+  z-index: 400;
+}
+
+.dragFont2 {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 1000px;
+  height: 300px;
+  position: absolute;
+  top: 5%;
+  margin-left: 30px;
+  left: 20%;
+  z-index: 100;
+}
+
+#animate {
+  position: relative;
+  top: -45px;
+  left: 732px;
+  opacity: 70%;
+}
+
+#bgfont {
+  opacity: 0.6;
+  z-index: -2;
+}
+
+#fontline {
+  position: absolute;
+  height: 248px;
+  top: 58px;
+  left: 35px;
+}
+
+#draggable {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  -webkit-filter: drop-shadow(6px 6px 2px rgba(40, 5, 50, 0.7));
+  filter: drop-shadow(6px 6px 2px rgba(40, 5, 50, 0.7));
+}
+
+.grap {
+  cursor: url(../All_img/grapA.png), auto;
+}
+
+.grapClick {
+  cursor: url(../All_img/grapB.png), auto;
+}
+
+#draggable:hover {
+  -webkit-filter: drop-shadow(12px 12px 2px rgba(40, 5, 50, 0.3));
+  filter: drop-shadow(12px 10px 2px rgba(40, 5, 50, 0.3));
+}
+
+.Textbox {
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  width: 220px;
+  height: 220px;
+  left: 160px;
+  margin-right: 62px;
+  position: relative;
+  top: 180px;
+  z-index: 2;
+}
+
+.emptybox {
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  z-index: -1;
+  top: 180px;
+  left: 735px;
+}
+
+.pronP {
+  position: absolute;
+  top: 350px;
+  font-style: bold;
+  font-size: 30px;
+}
+
+.pronA {
+  width: 400px;
+  position: absolute;
+  left: 440px;
+}
+
+.pronB {
+  width: 400px;
+  position: absolute;
+  left: 190px;
+}
+
+.fontpart {
+  text-align: center;
+  position: absolute;
+  top: 480px;
+  left: -80px;
+  z-index: -3;
+}
+
+h3 {
+  color: #fee;
+  font-size: 28px;
+  background-color: #826986;
+  width: 80px;
+  height: 40px;
+  border-radius: 10px;
+  border: 3px solid #c3a0bc;
+  position: relative;
+  left: 250px;
+}
+
+p {
+  font-size: 24px;
+  font-style: italic;
+}
+
+.interP {
+  width: 500px;
+  position: absolute;
+  top: 8px;
+  left: 350px;
+}
+
+.exP {
+  width: 500px;
+  position: absolute;
+  top: 100px;
+  left: 380px;
+  line-height: 12px;
+}
+
+#exB p {
+  line-height: 28px;
+}
+
+.nextpg {
+  width: 100px;
+  position: absolute;
+  left: 1300%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+  fill: #fee;
+}
+
+.nextpg:hover {
+  width: 120px;
+  fill: #1df528;
+}
+
+.SFX {
+  width: 100px;
+  position: absolute;
+  left: 20%;
+  top: -10%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.SFX:hover {
+  width: 120px;
+}
+/*# sourceMappingURL=style.css.map */

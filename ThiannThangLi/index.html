@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<title>saltnblack</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="icon" href="../All_img/fav_icon.png">
+
+</head>
+
+<body>
+
+	
+
+	<!-- 內容 -->
+
+	<div class="container">
+		<div class="videoBG">
+			<video preload id="myVideo" width="100%" height="100%" autoplay controls controlsList="nodownload">
+				<source src="../All_media/Video04.mp4" type="video/mp4">
+			</video>
+		</div>
+
+		<a href="https://saltnblack.net/medicine/"><div class="med"><img src="../All_img/med.svg"></div></a>
+		<div class="popUp1 allpop">
+			<div class="top-row"><span class="tpWindow">&emsp;>視窗.exe</span>
+				<button class="nav-button windows-button button-close">
+					<div style="transform: rotate(45deg);" class="cross-line"></div>
+					<div style="transform: rotate(-45deg);" class="cross-line"></div>
+				</button>
+			</div>
+			<div class="content">
+				<div class="popQ">
+					<img class="popQimg" src="../All_img/popQ_1.svg">
+					<div class="popQuest">是否已預約線上診療?</div>
+				</div>
+				<div class="buttons">
+					<a href="https://mail.google.com/mail/" target="_blank">
+						<button class="windows-button" id="go">已預約</button></a>
+							<a href="https://saltnblack.net/appointment_page/" target="_blank"><button class="windows-button" id="close2">尚未預約</button></a>
+				</div>
+			</div>
+		</div>
+		<div class="popUp2 allpop">
+			<div class="top-row"><span class="tpWindow">&emsp;&emsp;>視窗.exe</span>
+				<button class="nav-button windows-button button-close">
+					<div style="transform: rotate(45deg);" class="cross-line"></div>
+					<div style="transform: rotate(-45deg);" class="cross-line"></div>
+				</button>
+			</div>
+			<div class="content">
+				<div class="popQ">
+					<img class="popQimg" src="../All_img/popQ_1.svg">
+					<div class="popQuest">診療期間請開啟你的鏡頭</div>
+				</div>
+				<div class="buttons">
+					<button class="windows-button" id="hide2">套用虛擬背景</button>
+					<button class="windows-button" id="close2">&thinsp;拒絕&thinsp;</button>
+				</div>
+			</div>
+		</div>
+		<div class="popUp3 allpop">
+			<div class="top-row"><span class="tpWindow">&emsp;&emsp;>視窗.exe</span>
+				<button class="nav-button windows-button button-close">
+					<div style="transform: rotate(45deg);" class="cross-line"></div>
+					<div style="transform: rotate(-45deg);" class="cross-line"></div>
+				</button>
+			</div>
+			<div class="content">
+				<div class="popQ">
+					<img class="popQimg" src="../All_img/popQ_1.svg">
+					<div class="popQuest">請用酒精進行手部消毒</div>
+				</div>
+				<div class="buttons">
+					<button class="windows-button" id="hide3">一陣冰涼</button>
+					<button class="windows-button" id="close3">傷口刺痛</button>
+				</div>
+			</div>
+		</div>
+		<div class="popUp4 allpop">
+			<div class="top-row"><span class="tpWindow">&emsp;&emsp;>視窗.exe</span>
+				<button class="nav-button windows-button button-close">
+					<div style="transform: rotate(45deg);" class="cross-line"></div>
+					<div style="transform: rotate(-45deg);" class="cross-line"></div>
+				</button>
+			</div>
+			<div class="content">
+				<div class="popQ">
+					<img class="popQimg" src="../All_img/popQ_1.svg">
+					<div class="popQuest">請靠近測量額溫</div>
+				</div>
+				<div class="buttons">
+					<button class="windows-button" id="hide4">溫度正常</button>
+					<button class="windows-button" id="close4">高溫警報</button>
+				</div>
+			</div>
+		</div>
+		<div class="popUp5 allpop">
+			<div class="top-row"><span class="tpWindow">&emsp;&emsp;>視窗.exe</span>
+				<button class="nav-button windows-button button-close">
+					<div style="transform: rotate(45deg);" class="cross-line"></div>
+					<div style="transform: rotate(-45deg);" class="cross-line"></div>
+				</button>
+			</div>
+			<div class="content">
+				<div class="popQ">
+					<img class="popQimg" src="../All_img/popQ_1.svg">
+					<div class="popQuest">請待在你最舒適的地點，準備進入診療室</div>
+				</div>
+				<div class="buttons">
+					<button class="windows-button" id="hide5">&thinsp;確定&thinsp;</button>
+					<button class="windows-button" id="close5">等一等</button>
+				</div>
+			</div>
+		</div>
+		<div class="popUp6 allpop">
+			<div class="top-row"><span class="tpWindow">&emsp;&emsp;>視窗.exe</span>
+				<button class="nav-button windows-button button-close">
+					<div style="transform: rotate(45deg);" class="cross-line"></div>
+					<div style="transform: rotate(-45deg);" class="cross-line"></div>
+				</button>
+			</div>
+			<div class="content">
+				<div class="popQ">
+					<img class="popQimg" src="../All_img/popQ_1.svg">
+					<div class="popQuest">距離上次回家不知過了多久?</div>
+				</div>
+				<div class="buttons">
+					<button class="windows-button" id="hide6">不久前</button>
+					<button class="windows-button" id="close6">無法計算</button>
+				</div>
+			</div>
+		</div>
+		<div class="popUp7 allpop">
+			<div class="top-row"><span class="tpWindow">&emsp;&emsp;>視窗.exe</span>
+				<button class="nav-button windows-button button-close">
+					<div style="transform: rotate(45deg);" class="cross-line"></div>
+					<div style="transform: rotate(-45deg);" class="cross-line"></div>
+				</button>
+			</div>
+			<div class="content">
+				<div class="popQ">
+					<img class="popQimg" src="../All_img/popQ_1.svg">
+					<div class="popQuest">此時此刻你是否戴著口罩?</div>
+				</div>
+				<div class="buttons">
+					<button class="windows-button" id="hide7"> &emsp;是 &ensp;</button>
+					<button class="windows-button" id="close7"> &emsp;否 &ensp;</button>
+				</div>
+			</div>
+		</div>
+		<div class="popUp8 allpop">
+			<div class="top-row"><span class="tpWindow">&emsp;&emsp;>視窗.exe</span>
+				<button class="nav-button windows-button button-close">
+					<div style="transform: rotate(45deg);" class="cross-line"></div>
+					<div style="transform: rotate(-45deg);" class="cross-line"></div>
+				</button>
+			</div>
+			<div class="content">
+				<div class="popQ">
+					<img class="popQimg" src="../All_img/popQ_1.svg">
+					<div class="popQuest">你不在屬於你的城市</div>
+				</div>
+				<div class="buttons"> 
+					<button class="windows-button" id="hide8"> &emsp;是 &ensp;</button>
+					<button class="windows-button" id="close8"> &emsp;否 &ensp;</button>
+				</div>
+			</div>
+		</div>
+		<div class="popUp9 allpop">
+			<div class="top-row"><span class="tpWindow">&emsp;&emsp;>視窗.exe</span>
+				<button class="nav-button windows-button button-close">
+					<div style="transform: rotate(45deg);" class="cross-line"></div>
+					<div style="transform: rotate(-45deg);" class="cross-line"></div>
+				</button>
+			</div>
+			<div class="content">
+				<div class="popQ">
+					<!-- <img class="popQimg" src="../All_img/popQ_1.svg"> -->
+					<div class="popQuest">請至您的電子信箱中確認來自「仁心仁術診療室
+						(saltnblack.net@gmail.com)的預約通知。」</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- 內容end -->
+
+
+	<!-- Sound end -->
+
+	<script>
+		$('.popUp9').hide();
+		$('#myVideo').trigger('pause');
+
+		$(document).ready(function () {
+
+			var clickSFX = document.createElement("audio");
+			clickSFX.src = "../All_media/ButtonClick-SFX.mp3";
+			clickSFX.autoplay = false;
+			clickSFX.preload = true;
+			clickSFX.controls = true;
+
+			$('#myVideo').trigger('play');
+			
+			$('#myVideo').on('ended', function () {
+				console.log('Video has ended!');
+				$(".allpop").addClass('anipopUp');
+				$(".med").addClass('anipopUp');
+				$(this).remove();
+			});
+			//9
+			$('.popUp9 .button-close').click(function () {
+				clickSFX.play();
+				$('.popUp9').hide();
+			});
+			//8
+			$('.popUp8 .button-close').click(function () {
+				clickSFX.play();
+				$('.popUp8').hide();
+			});
+
+			$('.popUp8 #close8').click(function () {
+				clickSFX.play();
+				$('.popUp8').hide();
+			});
+			$('.popUp8 #hide8').click(function (){
+				clickSFX.play();
+				$('.popUp8').hide();
+			});
+			//7
+			$('.popUp7 .button-close').click(function () {
+				clickSFX.play();
+				$('.popUp7').hide();
+			});
+
+			$('.popUp7 #close7').click(function () {
+				clickSFX.play();
+				$('.popUp7').hide();
+			});
+			$('.popUp7 #hide7').click(function (){
+				clickSFX.play();
+				$('.popUp7').hide();
+			});
+			//6
+			$('.popUp6 .button-close').click(function () {
+				clickSFX.play();
+				$('.popUp6').hide();
+			});
+
+			$('.popUp6 #close6').click(function () {
+				clickSFX.play();
+				$('.popUp6').hide();
+			});
+			$('.popUp6 #hide6').click(function (){
+				clickSFX.play();
+				$('.popUp6').hide();
+			});
+			//5
+			$('.popUp5 .button-close').click(function () {
+				clickSFX.play();
+				$('.popUp5').hide();
+			});
+
+			$('.popUp5 #close5').click(function () {
+				clickSFX.play();
+				$('.popUp5').hide();
+			});
+			$('.popUp5 #hide5').click(function (){
+				clickSFX.play();
+				$('.popUp5').hide();
+			});
+			//4
+			$('.popUp4 .button-close').click(function () {
+				clickSFX.play();
+				$('.popUp4').hide();
+			});
+
+			$('.popUp4 #close4').click(function () {
+				clickSFX.play();
+				$('.popUp4').hide();
+			});
+			$('.popUp4 #hide4').click(function (){
+				clickSFX.play();
+				$('.popUp4').hide();
+			});
+			//3
+			$('.popUp3 .button-close').click(function () {
+				clickSFX.play();
+				$('.popUp3').hide();
+			});
+
+			$('.popUp3 #close3').click(function () {
+				clickSFX.play();
+				$('.popUp3').hide();
+			});
+			$('.popUp3 #hide3').click(function (){
+				clickSFX.play();
+				$('.popUp3').hide();
+			});
+			//2
+			$('.popUp2 .button-close').click(function () {
+				clickSFX.play();
+				$('.popUp2').hide();
+			});
+
+			$('.popUp2 #close2').click(function () {
+				clickSFX.play();
+				$('.popUp2').hide();
+			});
+			$('.popUp2 #hide2').click(function (){
+				clickSFX.play();
+				$('.popUp2').hide();
+			});
+			//1
+			$('.popUp1 .button-close').click(function () {
+				clickSFX.play();
+				$('.popUp1').hide();
+			});
+			$('.med').click(function(){
+				clickSFX.play();
+			});
+			$('#go').click(function(){
+				clickSFX.play();
+				$('.popUp9').show();
+			});
+		});
+
+	</script>
+
+
+</body>
+
+</html>

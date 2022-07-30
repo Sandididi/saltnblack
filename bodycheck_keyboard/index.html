@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fallinwell.css">
+    <link rel="icon" href="img/fav_icon.png">
+    <title>PressedKeyboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.sound.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.9.3/matter.min.js"></script>
+
+    <script language="javascript" src="drawFont.js"></script>
+
+</head>
+<body>    
+  <div class="UI">
+    <a href="https://saltnblack.net/ThiannThangLi/"><div class="pop_next"><svg viewBox="0 0 180 180">
+      <path class="st0"
+          d="M88.5,13.6c41.3,0,74.9,33.6,74.9,74.9s-33.6,74.9-74.9,74.9s-74.9-33.6-74.9-74.9S47.2,13.6,88.5,13.6
+               M88.5,4.1C41.9,4.1,4.1,41.9,4.1,88.5s37.8,84.4,84.4,84.4s84.4-37.8,84.4-84.4S135.1,4.1,88.5,4.1L88.5,4.1z" />
+      <g>
+          <path class="st0"
+              d="M74.2,123.3c-1.4,0-2.9-0.7-3.8-1.9c-1.6-2.1-1.2-5.1,0.9-6.7L106,88.5L71.3,62.3c-2.1-1.6-2.5-4.6-0.9-6.7
+                  c1.6-2.1,4.6-2.5,6.7-0.9l39.8,30c1.2,0.9,1.9,2.3,1.9,3.8s-0.7,2.9-1.9,3.8l-39.8,30C76.2,123,75.2,123.3,74.2,123.3z" />
+      </g>
+  </svg></div></a>
+  </div>
+<script>
+
+var Engine = Matter.Engine;
+var World = Matter.World;
+var Bodies = Matter.Bodies;
+// var Render = Matter.Render;
+
+var engine;
+var texts_01 = [];
+var ground;
+var wall01;
+var wall02;
+
+var UIfade;
+var UIfadeAmount = 0;
+
+let ctx;
+let canvas;
+
+var a;
+var count;
+
+var UItop;
+let bg1,bg2;
+var path;
+
+  function setup() { 
+    canvas = createCanvas(windowWidth-1, windowHeight-5);
+
+    ctx = canvas.drawingContext;
+
+    engine = Engine.create();
+    Engine.run(engine);
+    var options = {
+        isStatic:true
+    }
+    
+    ground = Bodies.rectangle(windowWidth/2,windowHeight,windowWidth,5,options);
+    wall01 = Bodies.rectangle(0,0,30,windowHeight*2,options);
+    wall02 = Bodies.rectangle(windowWidth,0,30,windowHeight*2,options);
+    World.add(engine.world, [ground, wall01, wall02]);
+
+    bg1 = color(240,240,245);
+    bg2 = color(179,201,166);
+    pixelDensity(1);
+    UIfade=255;
+    count=0;
+    next = select('.pop_next');
+    PressedSFX.playMode('restart'); 
+    PressedSFX.play();
+    sound_A = loadSound("../All_media/keyA.mp3");
+    sound_B = loadSound("../All_media/keyB.mp3");
+    sound_C = loadSound("../All_media/keyC.mp3");
+    sound_D = loadSound("../All_media/keyD.mp3");
+    sound_E = loadSound("../All_media/keyE.mp3");
+    sound_F = loadSound("../All_media/keyF.mp3");
+    sound_G = loadSound("../All_media/keyG.mp3");
+    sound_H = loadSound("../All_media/keyH.mp3");
+    sound_I = loadSound("../All_media/keyI.mp3");
+    sound_J = loadSound("../All_media/keyJ.mp3");
+    sound_K = loadSound("../All_media/keyK.mp3");
+    sound_L = loadSound("../All_media/keyL.mp3");
+    sound_M = loadSound("../All_media/keyM.mp3");
+    sound_N = loadSound("../All_media/keyN.mp3");
+    sound_O = loadSound("../All_media/keyO.mp3");
+    sound_P = loadSound("../All_media/keyP.mp3");
+    sound_Q = loadSound("../All_media/keyQ.mp3");
+    sound_R = loadSound("../All_media/keyR.mp3");
+    sound_S = loadSound("../All_media/keyS.mp3");
+    sound_U = loadSound("../All_media/keyU.mp3");
+    sound_V = loadSound("../All_media/keyV.mp3");
+    sound_W = loadSound("../All_media/keyW.mp3");
+    sound_X = loadSound("../All_media/keyX.mp3");
+    sound_Y = loadSound("../All_media/keyY.mp3");
+    sound_Z = loadSound("../All_media/keyZ.mp3");
+  } 
+
+  function preload(){
+    fontImage01 = loadImage('../All_img/fallfontA.svg');
+    fontImage02 = loadImage('../All_img/fallfontB.svg');
+    fontImage03 = loadImage('../All_img/fallfontC.svg');
+    fontImage04 = loadImage('../All_img/fallfontD.svg');
+    fontImage05 = loadImage('../All_img/fallfontE.svg');
+    fontImage06 = loadImage('../All_img/fallfontF.svg');
+    fontImage07 = loadImage('../All_img/fallfontG.svg');
+    fontImage08 = loadImage('../All_img/fallfontH.svg');
+    fontImage09 = loadImage('../All_img/fallfontI.svg');
+    fontImage10 = loadImage('../All_img/fallfontJ.svg');
+    fontImage11 = loadImage('../All_img/fallfontK.svg');
+    fontImage12 = loadImage('../All_img/fallfontL.svg');
+    fontImage13 = loadImage('../All_img/fallfontM.svg');
+    fontImage14 = loadImage('../All_img/fallfontN.svg');
+    fontImage15 = loadImage('../All_img/fallfontO.svg');
+    fontImage16 = loadImage('../All_img/fallfontP.svg');
+    fontImage17 = loadImage('../All_img/fallfontQ.svg');
+    fontImage18 = loadImage('../All_img/fallfontR.svg');
+    fontImage19 = loadImage('../All_img/fallfontS.svg');
+    fontImage20 = loadImage('../All_img/fallfontT.svg');
+    fontImage21 = loadImage('../All_img/fallfontU.svg');
+    fontImage22 = loadImage('../All_img/fallfontV.svg');
+    fontImage23 = loadImage('../All_img/fallfontW.svg');
+    fontImage24 = loadImage('../All_img/fallfontX.svg');
+    fontImage25 = loadImage('../All_img/fallfontY.svg');
+    fontImage26 = loadImage('../All_img/fallfontZ.svg');
+    BGtexture=loadImage('../All_img/BGnoise.png');
+    UIimg = loadImage('../All_img/Pressed.svg');
+    PressedSFX = loadSound("../All_media/pressedSFX.wav");
+    
+  }
+
+//key'a''s'
+  function keyTyped(){
+      if(key === 'q'){
+        a = random(20,60);
+        texts_01.push(new Text17(random(a*2.5,windowWidth-a*2.5),random(0,100),a*5,a));  
+        sound_Q.playMode('restart'); 
+        sound_Q.play();
+        count=count+1;     
+      }else if (key === 'w'){
+        a = random(20,60);
+        texts_01.push(new Text23(random(a*2,windowWidth-a*2),random(0,100),a*4,a));
+        sound_W.playMode('restart'); 
+        sound_W.play();
+        count=count+1;
+      }else if (key === 'e'){
+        a = random(20,60);
+        texts_01.push(new Text5(random(a*2,windowWidth-a*2),random(0,100),a*4,a));
+        sound_E.playMode('restart'); 
+        sound_E.play();
+        count=count+1;
+      }else if (key === 'r'){
+        a = random(20,60);
+        texts_01.push(new Text18(random(a*3,windowWidth-a*3),random(0,100),a*6,a));
+        sound_R.playMode('restart'); 
+        sound_R.play();
+        count=count+1;
+      }else if (key === 't'){
+        a = random(20,60);
+        texts_01.push(new Text20(random(a*2.5,windowWidth-a*2.5),random(0,100),a*5,a));
+        sound_A.stop();
+        sound_B.stop();
+        sound_C.stop();
+        sound_D.stop();
+        sound_E.stop();
+        sound_F.stop();
+        sound_G.stop();
+        sound_H.stop();
+        sound_I.stop();
+        sound_J.stop();
+        sound_K.stop();
+        sound_L.stop();
+        sound_M.stop();
+        sound_N.stop();
+        sound_O.stop();
+        sound_P.stop();
+        sound_Q.stop();
+        sound_R.stop();
+        sound_S.stop();
+        sound_U.stop();
+        sound_V.stop();
+        sound_W.stop();
+        sound_X.stop();
+        sound_Y.stop();
+        sound_Z.stop();
+        count=count+1;
+      }else if (key === 'y'){
+        a = random(20,60);
+        texts_01.push(new Text25(random(a,windowWidth-a),random(0,100),a*2,a));
+        sound_Y.playMode('restart'); 
+        sound_Y.play();
+        count=count+1;
+      }else if (key === 'u'){
+        a = random(20,60);
+        texts_01.push(new Text21(random(a*2,windowWidth-a*2),random(0,100),a*4,a));
+        sound_U.playMode('restart'); 
+        sound_U.play();
+        count=count+1;
+      }else if (key === 'i'){
+        a = random(20,60);
+        texts_01.push(new Text9(random(a*2.5,windowWidth-a*2.5),random(0,100),a*5,a));
+        sound_I.playMode('restart'); 
+        sound_I.play();
+        count=count+1;
+      }else if (key === 'o'){
+        a = random(20,60);
+        texts_01.push(new Text15(random(a/2,windowWidth-a/2),random(0,100),a,a));
+        sound_O.playMode('restart'); 
+        sound_O.play();
+        count=count+1;
+      }else if (key === 'p'){
+        a = random(20,60);
+        texts_01.push(new Text16(random(a,windowWidth-a),random(0,100),a*2,a));
+        sound_P.playMode('restart'); 
+        sound_P.play();
+        count=count+1;
+      }else if (key === 'a'){
+        a = random(20,60);
+        texts_01.push(new Text1(random(a*1.5,windowWidth-a*1.5),random(0,100),a*3,a));
+        sound_A.playMode('restart'); 
+        sound_A.play();
+        count=count+1;
+      }else if (key === 's'){
+        a = random(20,60);
+        texts_01.push(new Text19(random(a*1.5,windowWidth-a*1.5),random(0,100),a*3,a));
+        sound_S.playMode('restart'); 
+        sound_S.play();
+        count=count+1;
+      }else if (key === 'd'){
+        a = random(20,60);
+        texts_01.push(new Text4(random(a,windowWidth-a),random(0,100),a*2,a));
+        sound_D.playMode('restart'); 
+        sound_D.play();
+        count=count+1;
+      }else if (key === 'f'){
+        a = random(20,60);
+        texts_01.push(new Text6(random(a*2.5,windowWidth-a*2.5),random(0,100),a*5,a));
+        sound_F.playMode('restart'); 
+        sound_F.play();
+        count=count+1;
+      }else if (key === 'g'){
+        a = random(20,60);
+        texts_01.push(new Text7(random(a,windowWidth-a),random(0,100),a*2,a));
+        sound_G.playMode('restart'); 
+        sound_G.play();
+        count=count+1;
+      }else if (key === 'h'){
+        a = random(20,60);
+        texts_01.push(new Text8(random(a,windowWidth-a),random(0,100),a*2,a));
+        sound_H.playMode('restart'); 
+        sound_H.play();
+        count=count+1;
+      }else if (key === 'j'){
+        a = random(20,60);
+        texts_01.push(new Text10(random(a*2,windowWidth-a*2),random(0,100),a*4,a));
+        sound_J.playMode('restart'); 
+        sound_J.play();
+        count=count+1;
+      }else if (key === 'k'){
+        a = random(20,60);
+        texts_01.push(new Text11(random(a*2,windowWidth-a*2),random(0,100),a*4,a));
+        sound_K.playMode('restart'); 
+        sound_K.play();
+        count=count+1;
+      }else if (key === 'l'){
+        a = random(20,60);
+        texts_01.push(new Text12(random(a*2.5,windowWidth-a*2.5),random(0,100),a*5,a));
+        sound_L.playMode('restart'); 
+        sound_L.play();
+        count=count+1;
+      }else if (key === 'z'){
+        a = random(20,60);
+        texts_01.push(new Text26(random(a*3.5,windowWidth-a*3.5),random(0,100),a*7,a));
+        sound_Z.playMode('restart'); 
+        sound_Z.play();
+        count=count+1;
+      }else if (key === 'x'){
+        a = random(20,60);
+        texts_01.push(new Text24(random(a,windowWidth-a),random(0,100),a*2,a));
+        sound_X.playMode('restart'); 
+        sound_X.play();
+        count=count+1;
+      }else if (key === 'c'){
+        a = random(20,60);
+        texts_01.push(new Text3(random(a*1.5,windowWidth-a*1.5),random(0,100),a*3,a));
+        sound_C.playMode('restart'); 
+        sound_C.play();
+        count=count+1;
+      }else if (key === 'v'){
+        a = random(20,60);
+        texts_01.push(new Text22(random(a*2.5,windowWidth-a*2.5),random(0,100),a*5,a));
+        sound_V.playMode('restart'); 
+        sound_V.play();
+        count=count+1;
+      }else if (key === 'b'){
+        a = random(20,60);
+        texts_01.push(new Text2(random(a*4,windowWidth-a*4),random(0,100),a*8,a));
+        sound_B.playMode('restart'); 
+        sound_B.play();
+        count=count+1;
+      }else if (key === 'n'){
+        a = random(20,60);
+        texts_01.push(new Text14(random(a,windowWidth-a),random(0,100),a*2,a));
+        sound_N.playMode('restart'); 
+        sound_N.play();
+        count=count+1;
+      }else if (key === 'm'){
+        a = random(20,60);
+        texts_01.push(new Text13(random(a*2,windowWidth-a*2),random(0,100),a*4,a));
+        sound_M.playMode('restart'); 
+        sound_M.play();
+        count=count+1;
+      }
+      console.log(count);
+  }
+  
+  // function fadeIn(){
+  //   this.addClass('fadeIn');
+  // }
+
+  function draw() {   
+    loadPixels();
+    rectMode(CENTER);
+    // background(255,random(150,200));
+    gradientBG(0,0,windowWidth,windowHeight,bg1,bg2);
+    for (var i = 0; i < texts_01.length; i++){
+      texts_01[i].show();
+    }
+    stroke(0);
+    strokeWeight(20);
+    push();
+    blendMode(EXCLUSION);
+    for(var i=0;i<16;i++){
+      for(var j=0;j<9;j++){
+        image(BGtexture,i*BGtexture.width,j*BGtexture.width);
+      }
+    }
+    pop();
+    push();
+    imageMode(CENTER);
+    tint(255, UIfade);
+    image(UIimg,windowWidth/2,windowHeight/6);
+    
+    if(count>15){
+      UIfadeAmount=5;
+      next.addClass('fadeIn');
+    }
+    UIfade-=UIfadeAmount;
+    pop();
+  }
+
+  function gradientBG(bgX,bgY,bgW,bgH,bg1,bg2){
+    noFill();
+    for(let i = bgY; i <= bgY + bgH; i++){
+      let inter = map(i, bgY, bgY + bgH, 0, 1);
+      let c = lerpColor(bg1, bg2, inter);
+      stroke(c);
+      line(bgX, i,bgX+bgW,i);
+    }
+  }
+
+  
+</script>
+
+</body>
+</html>

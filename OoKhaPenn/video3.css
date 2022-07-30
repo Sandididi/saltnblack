@@ -1,0 +1,105 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&family=Special+Elite&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap);
+@font-face {
+  font-family: 'Noto Serif TC', serif;
+  src: url(https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&display=swap);
+  unicode-range: U+4E00-9FFF,U+3100-312F;
+}
+
+@font-face {
+  font-family: 'Noto Serif', serif;
+  src: url(https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap);
+  unicode-range: U+00-024F;
+}
+
+* {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 600;
+}
+
+body {
+  background-color: #fff;
+}
+
+.nextpg {
+  cursor: pointer;
+  width: 85px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  fill: #fee;
+}
+
+.nextpg:hover {
+  fill: #1df528;
+}
+
+.videoBG {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.anifadein {
+  -webkit-animation: fade-in 2s;
+          animation: fade-in 2s;
+}
+
+.context {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../All_img/noise.gif);
+  background-blend-mode: multiply;
+  background-color: #4c3659;
+}
+
+.go_nextP {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 80%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  color: #fee;
+  font-size: 55px;
+  text-align: center;
+  letter-spacing: 5px;
+  line-height: 42px;
+}
+
+#nextB {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+
+#nextB:hover {
+  width: 95px;
+}
+/*# sourceMappingURL=video3.css.map */

@@ -1,0 +1,373 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap);
+@font-face {
+  font-family: 'Noto Serif TC', serif;
+  src: url(https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&display=swap);
+  unicode-range: U+4E00-9FFF,U+3100-312F;
+}
+
+@font-face {
+  font-family: 'Noto Serif', serif;
+  src: url(https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap);
+  unicode-range: U+00-024F;
+}
+
+* {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 600;
+  color: #4c3659;
+}
+
+body {
+  background-color: #4c3659;
+}
+
+.texture {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+  background-image: url(../All_img/noise.gif);
+  opacity: 0.2;
+}
+
+.logo {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+}
+
+.logo img {
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  width: 620px;
+}
+
+.button {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+.but01:hover .font01 {
+  width: 138px;
+  -webkit-filter: drop-shadow(6px 6px 2px rgba(40, 5, 50, 0.7));
+  filter: drop-shadow(6px 6px 2px rgba(40, 5, 50, 0.7));
+}
+
+.but01:hover .buthover01 {
+  opacity: 1;
+}
+
+.font01 {
+  position: absolute;
+  top: 526px;
+  left: 25%;
+  width: 128px;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  fill: #FFEEEE;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.buthover01 {
+  position: absolute;
+  top: 410px;
+  left: 25%;
+  width: 220px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: -1;
+  opacity: 0;
+  -webkit-animation: rotate 15s infinite;
+          animation: rotate 15s infinite;
+}
+
+.but02:hover .font02 {
+  width: 138px;
+  -webkit-filter: drop-shadow(6px 6px 2px rgba(40, 5, 50, 0.7));
+  filter: drop-shadow(6px 6px 2px rgba(40, 5, 50, 0.7));
+}
+
+.but02:hover .buthover02 {
+  opacity: 1;
+}
+
+.font02 {
+  position: absolute;
+  top: 526px;
+  left: 50%;
+  width: 128px;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  fill: #FFEEEE;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.buthover02 {
+  position: absolute;
+  top: 410px;
+  left: 50%;
+  width: 220px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: -1;
+  opacity: 0;
+  -webkit-animation: rotate 15s infinite;
+          animation: rotate 15s infinite;
+}
+
+.but03:hover .font03 {
+  fill: #876b8b;
+}
+
+.but03:hover .buthover03 {
+  opacity: 1;
+}
+
+.font03 {
+  position: absolute;
+  top: 460px;
+  left: 75%;
+  width: 128px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  fill: #FFEEEE;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.buthover03 {
+  position: absolute;
+  top: 410px;
+  left: 75%;
+  width: 220px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: -1;
+  opacity: 0;
+  -webkit-animation: rotate 15s infinite;
+          animation: rotate 15s infinite;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: translateX(-50%) rotate(0deg);
+            transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translateX(-50%) rotate(-360deg);
+            transform: translateX(-50%) rotate(-360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: translateX(-50%) rotate(0deg);
+            transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translateX(-50%) rotate(-360deg);
+            transform: translateX(-50%) rotate(-360deg);
+  }
+}
+
+.allpop {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  width: 80%;
+  height: 70%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 2px;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+  border-right: 2px solid #4c3659;
+  border-bottom: 2px solid #4c3659;
+  outline: 2px solid #A8A89E;
+  background-color: #FAF9DB;
+  -webkit-filter: drop-shadow(15px 15px 3px rgba(40, 5, 50, 0.7));
+  filter: drop-shadow(15px 15px 3px rgba(40, 5, 50, 0.7));
+  z-index: 3;
+  opacity: 1;
+}
+
+.top-row {
+  background-color: #4c3659;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3px;
+}
+
+.top-row span {
+  left: -86%;
+}
+
+.nav-button {
+  margin-left: 1px;
+  height: 30px;
+  width: 30px;
+  position: relative;
+}
+
+.tpWindow {
+  color: #D0D6C5;
+  position: relative;
+  right: 320px;
+  font-size: 14px;
+}
+
+.cross-line {
+  height: 28px;
+  width: 1.8px;
+  background-color: #4c3659;
+  position: absolute;
+  top: 0px;
+  left: 12px;
+}
+
+.buttons {
+  position: relative;
+  right: -140px;
+  margin-right: 24px;
+  bottom: 10px;
+}
+
+.windows-button {
+  margin-left: 30px;
+  background-color: #FAF9DB;
+  border-right: 2px solid #4c3659;
+  border-bottom: 2px solid #4c3659;
+  border-left: 2px solid #D0D6C5;
+  border-top: 2px solid #D0D6C5;
+  border-radius: 2px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.windows-button:hover {
+  cursor: pointer;
+}
+
+.windows-button:active {
+  border-radius: 0;
+  outline: 0;
+  border-right: 2px solid #D0D6C5;
+  border-bottom: 2px solid #D0D6C5;
+  border-left: 2px solid #4c3659;
+  border-top: 2px solid #4c3659;
+  border-radius: 2px;
+}
+
+.content {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.Photo {
+  margin-top: 15px;
+  width: 35%;
+  height: 87%;
+  border-right: solid 2px #4c3659;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(../All_img/photo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 92%;
+  background-blend-mode: multiply;
+  opacity: 0.85;
+  background-color: #FAF9DB;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.Photo:hover {
+  opacity: 1;
+}
+
+.Photo span {
+  font-size: 14px;
+  font-style: normal;
+}
+
+.Photo .name {
+  position: absolute;
+  bottom: 25%;
+}
+
+.Para {
+  width: 65%;
+  height: 87%;
+  margin-left: 15px;
+  margin-right: 15px;
+  overflow: auto;
+}
+
+h1 {
+  line-height: 6px;
+}
+
+h2 {
+  background: #4c3659;
+  color: #FFEEEE;
+  letter-spacing: 2px;
+}
+
+.Para p {
+  font-size: 18px;
+}
+
+.Credit {
+  font-weight: bold;
+  line-height: 35px;
+}
+
+.Credit p {
+  font-size: 36px;
+}
+
+.fblink {
+  position: absolute;
+  left: 90%;
+  bottom: 8%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.fblink img {
+  width: 50px;
+}
+
+.fblink:hover {
+  -webkit-filter: drop-shadow(5px 5px 2px rgba(40, 5, 50, 0.7));
+  filter: drop-shadow(5px 5px 2px rgba(40, 5, 50, 0.7));
+}
+/*# sourceMappingURL=appointment.css.map */

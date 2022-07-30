@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ho-I-SING.62</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="../All_img/fav_icon.png">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+</head>
+
+<body>
+  <div class="Texture"></div>
+  <div class="all"></div>
+    <div class="dragFont2">
+      <div class="emptybox"></div>
+      <img src="../All_img/fontline.svg" id="fontline">
+    </div>
+    <div class="dragFont">
+      <img class="Textbox" src="../All_img/grayfont.png" id="bgfont">
+      <img class="Textbox" src="../All_img/bkfont.png">
+      <img class="Textbox grap" src="../All_img/dragfont.png" id="draggable">
+      <img class="Textbox " src="../All_img/dragfont.png" id="animate">
+    </div>
+
+    
+    <div class="Content">
+      <div class="pronP">
+        <div class="pronA">
+          <h2>thàng - thiànn</h2>
+        </div>
+        <div class="pronB">
+          <h2>thiànn - thàng</h2>
+        </div>
+      </div>
+      <div class="fontpart">
+        <h3>解釋</h3>
+        <hr style="border: none;">
+        <h3>例句</h3>
+        <a class="nextpg" href="https://saltnblack.net/ThiannThangThiann/">
+          <svg viewBox="0 0 180 180">
+          <path class="st0"
+              d="M88.5,13.6c41.3,0,74.9,33.6,74.9,74.9s-33.6,74.9-74.9,74.9s-74.9-33.6-74.9-74.9S47.2,13.6,88.5,13.6
+          M88.5,4.1C41.9,4.1,4.1,41.9,4.1,88.5s37.8,84.4,84.4,84.4s84.4-37.8,84.4-84.4S135.1,4.1,88.5,4.1L88.5,4.1z" />
+          <g>
+              <path class="st0"
+                  d="M74.2,123.3c-1.4,0-2.9-0.7-3.8-1.9c-1.6-2.1-1.2-5.1,0.9-6.7L106,88.5L71.3,62.3c-2.1-1.6-2.5-4.6-0.9-6.7
+             c1.6-2.1,4.6-2.5,6.7-0.9l39.8,30c1.2,0.9,1.9,2.3,1.9,3.8s-0.7,2.9-1.9,3.8l-39.8,30C76.2,123,75.2,123.3,74.2,123.3z" />
+          </g>
+      </svg></a>
+        <a class="SFX" id="pain_1"><img src="../All_img/soundIcon.svg"></a>
+        <a class="SFX" id="pain_2"><img src="../All_img/soundIcon.svg"></a>
+        <!-- target="_blank" -->
+
+        <div>
+          <div class="interP">
+            <p>形容詞，疼痛，可指生理或心理上的痛覺。</p>
+          </div>
+        </div>
+        <div class="exP">
+          <div id="exA">
+            <p>身軀若不時會痛疼，就愛去看醫生。</p>
+          </div>
+          <div id="exB">
+            <p>（身體若時不時會疼痛，就要去看醫生。）</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+
+</body>
+
+<script>
+  $(".pronB h2").hide();
+  $(".nextpg").hide();
+  $("#pain_2").hide();
+
+  
+  var clickSFX = document.createElement("audio");
+  clickSFX.src = "../All_media/ButtonClick-SFX.mp3";
+  var dragSFX = document.createElement("audio");
+  dragSFX.src = "../All_media/dragSFX.wav";
+  var dropSFX = document.createElement("audio");
+  dropSFX.src = "../All_media/dropSFX.wav"
+  var pain_1 = document.createElement("audio");
+  pain_1.src = "../All_media/pain_1.wav"
+  var pain_2 = document.createElement("audio");
+  pain_2.src = "../All_media/pain_2.wav"
+  clickSFX.autoplay = false;
+  dragSFX.autoplay = false;
+  dropSFX.autoplay = false;
+  clickSFX.preload = true;
+  dragSFX.preload = true;
+  dropSFX.preload = true;
+  clickSFX.controls = true;
+  dragSFX.controls = true;
+  dropSFX.controls = true;
+  pain_1.autoplay = false;
+  pain_1.preload = true;
+  pain_1.controls = true;
+  pain_2.autoplay = false;
+  pain_2.preload = true;
+  pain_2.controls = true;
+  
+  $(function () {
+    $("#animate").animate({'left':'160px'},4500).fadeOut(800);
+
+    $("#draggable").mouseup(function () {
+      dropSFX.play();
+      $("#draggable").removeClass('grapClick').addClass('grap');
+    })
+      .mousedown(function () {
+        dragSFX.play();
+        $("#draggable").removeClass('grap').addClass('grapClick');
+      });
+
+
+    $("#draggable").draggable({
+      cursor: "grabbing", opacity: 0.7,
+      containment: '.all'
+    });
+
+    $("#bgfont").droppable({
+      drop: function (event, ui) {
+        $(".nextpg").show();
+        $(".pronB h2").show();
+        $(".pronA h2").hide();
+        $("#pain_2").show();
+        $("#pain_1").hide();
+        $(".interP p").text('動詞，疼愛、關切憐惜。');
+        $("#exA p").text('無爽快的時，偌希望有人會當來疼痛家己。');
+        $("#exB p").text('（（身體）不舒服的時候，多希望有人能來疼惜自己。）');
+        $(".SFX").click(function(){
+          pain_2.play();
+          pain_1.pause();
+        });
+      }
+    });
+
+    $(".emptybox").droppable({
+      drop: function (event, ui) {
+        $(".pronB h2").hide();
+        $(".pronA h2").show();
+        $("#pain_2").hide();
+        $("#pain_1").show();
+        $(".interP p").text('形容詞，疼痛，可指生理或心理上的痛覺。');
+        $("#exA p").text('身軀若不時會痛疼，就愛去看醫生。');
+        $("#exB p").text('（身體若時不時會疼痛，就要去看醫生。）');
+        $(".SFX").click(function(){
+          pain_1.play();
+          pain_2.pause();
+        });
+      }
+    });
+
+  });
+
+  $(".nextpg").click(function () {
+    clickSFX.play();
+  });
+ 
+  $("#pain_1").click(function () {
+    pain_1.play();
+  });
+</script>
+
+</html>

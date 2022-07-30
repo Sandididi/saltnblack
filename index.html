@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<title>Ho-I-SING.62</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="video1.css">
+	<link rel="icon" href="../All_img/fav_icon.png">
+
+</head>
+
+<body>
+
+	<!-- LoadingPage -->
+
+	<div class="loading-warpper">
+		
+		<div class="loadObj">
+			<img class="loadbird" src="../All_img/loadingBird.gif">
+			<h1 class="loadingcount">0%</h1>
+			<hr class="loadingbar">
+		</div>
+		<div class="instruct">
+			<img class="intoLOGO" src="../All_img/logofont.png">
+			<div class="stratimg">
+				<img class="earSound" src="../All_img/earphone.svg">
+				<img src="../All_img/computer.svg">
+			</div>
+			<div class="intofont">
+				<div>
+					<h3>在候診時建議您戴上耳機</h3>
+					<h3>並使用滑鼠及鍵盤進行療程</h3>
+				</div>
+				<div class="nextpg" id="nextA">
+					<svg viewBox="0 0 180 180">
+						<path class="st0" d="M88.5,13.6c41.3,0,74.9,33.6,74.9,74.9s-33.6,74.9-74.9,74.9s-74.9-33.6-74.9-74.9S47.2,13.6,88.5,13.6
+								 M88.5,4.1C41.9,4.1,4.1,41.9,4.1,88.5s37.8,84.4,84.4,84.4s84.4-37.8,84.4-84.4S135.1,4.1,88.5,4.1L88.5,4.1z" />
+						<g>
+							<path class="st0"
+								d="M74.2,123.3c-1.4,0-2.9-0.7-3.8-1.9c-1.6-2.1-1.2-5.1,0.9-6.7L106,88.5L71.3,62.3c-2.1-1.6-2.5-4.6-0.9-6.7
+									c1.6-2.1,4.6-2.5,6.7-0.9l39.8,30c1.2,0.9,1.9,2.3,1.9,3.8s-0.7,2.9-1.9,3.8l-39.8,30C76.2,123,75.2,123.3,74.2,123.3z" />
+						</g>
+					</svg>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- 內容 -->
+
+	<div class="container">
+		<div class="videoBG">
+			<video preload id="myVideo" width="100%" height="100%" autoplay controls controlsList="nodownload">
+				<source src="../All_media/Video01.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div class="context">
+			<div class="go_nextP">
+				<h2>大部分的時間我都分不清楚<h2>
+				<h1>&ensp;世界如何痛疼又如何疼痛？</h1>
+						<a href="https://saltnblack.net/bodycheck_mouseDrag/">
+							<div class="nextpg" id="nextB">
+								<svg viewBox="0 0 180 180">
+									<path class="st0" d="M88.5,13.6c41.3,0,74.9,33.6,74.9,74.9s-33.6,74.9-74.9,74.9s-74.9-33.6-74.9-74.9S47.2,13.6,88.5,13.6
+								 M88.5,4.1C41.9,4.1,4.1,41.9,4.1,88.5s37.8,84.4,84.4,84.4s84.4-37.8,84.4-84.4S135.1,4.1,88.5,4.1L88.5,4.1z" />
+									<g>
+										<path class="st0"
+											d="M74.2,123.3c-1.4,0-2.9-0.7-3.8-1.9c-1.6-2.1-1.2-5.1,0.9-6.7L106,88.5L71.3,62.3c-2.1-1.6-2.5-4.6-0.9-6.7
+									c1.6-2.1,4.6-2.5,6.7-0.9l39.8,30c1.2,0.9,1.9,2.3,1.9,3.8s-0.7,2.9-1.9,3.8l-39.8,30C76.2,123,75.2,123.3,74.2,123.3z" />
+									</g>
+								</svg>
+							</div>
+						</a>
+
+			</div>
+		</div>
+	</div>
+
+
+	<!-- 內容end -->
+
+
+	<!-- Sound end -->
+
+	<script>
+
+		$(".instruct").hide();
+		$('#myVideo').trigger('pause');
+		$(".context").hide();
+
+		var clickSFX = document.createElement("audio");
+			clickSFX.src = "../All_media/ButtonClick-SFX.mp3";
+			clickSFX.autoplay = false;
+			clickSFX.preload = true;
+			clickSFX.controls = true;
+			
+			var earphoneSFX = document.createElement("audio");
+			earphoneSFX.src = "../All_media/earphone.mp3";
+			earphoneSFX.autoplay = false;
+			earphoneSFX.preload = true;
+			earphoneSFX.controls = true;
+
+			var Bird = document.createElement("audio");
+        	Bird.src = "../../All_media/Loading_Birds.wav";
+        	Bird.preload = true;
+        	Bird.autoplay = false;
+        	Bird.controls = true;
+
+			
+		// function myaudio(){
+        //     Bird.play();
+        // }
+        // myaudio();
+        // setInterval(function(){
+        //     myaudio()
+        // },1000);
+
+		$(document).ready(function () {
+			
+			Bird.play();
+
+			var counter = 0;
+			var c = 0;
+			var i = setInterval(function () {
+				$(".loadObj h1").html(c + "%");
+				$(".loadObj hr").css("width", (c) + "%");
+
+				counter++;
+				c++;
+				
+				if (counter == 101) {
+					clearInterval(i);
+					$(".loadObj").fadeOut(500);
+					$(".instruct").fadeIn(500);
+					Bird.pause();
+				}
+			}, 50);
+
+			$("#nextA").click(function () {
+				clickSFX.play();
+				$(".loading-warpper").fadeOut(300);
+				$('#myVideo').trigger('play');
+			});
+
+			$("#nextB").click(function () {
+				clickSFX.play();
+			});
+
+			$('#myVideo').on('ended', function () {
+				console.log('Video has ended!');
+				$(this).remove();
+				$(".context").show();
+				$(".context").addClass('anipopUp');
+			});
+
+			// $(".earSound").click(function () {
+			// 	earphoneSFX.play();
+			// });
+
+			$(".earSound").mouseover(function(){
+				earphoneSFX.play();
+			});
+
+		});
+
+	</script>
+
+
+</body>
+
+</html>
