@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="fallinwell.css">
-    <link rel="icon" href="https://github.com/Sandididi/saltnblack/blob/main/All_img/fav_icon.png?raw=true">
+    <link rel="icon" href="../All_img/fav_icon.png">
     <title>PressedKeyboard</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.dom.min.js"></script>
@@ -17,7 +17,7 @@
 </head>
 <body>    
   <div class="UI">
-    <a href="/saltnblack/ThiannThangLi/index.html"><div class="pop_next"><svg viewBox="0 0 180 180">
+    <a href="../ThiannThangLi/index.html"><div class="pop_next"><svg viewBox="0 0 180 180">
       <path class="st0"
           d="M88.5,13.6c41.3,0,74.9,33.6,74.9,74.9s-33.6,74.9-74.9,74.9s-74.9-33.6-74.9-74.9S47.2,13.6,88.5,13.6
                M88.5,4.1C41.9,4.1,4.1,41.9,4.1,88.5s37.8,84.4,84.4,84.4s84.4-37.8,84.4-84.4S135.1,4.1,88.5,4.1L88.5,4.1z" />
@@ -323,9 +323,9 @@ var path;
       console.log(count);
   }
   
-  // function fadeIn(){
-  //   this.addClass('fadeIn');
-  // }
+  function fadeIn(){
+    this.addClass('fadeIn');
+  }
 
   function draw() {   
     loadPixels();
