@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="fallinwell.css">
     <link rel="icon" href="../All_img/fav_icon.png">
-    <title>PressedKeyboard</title>
+    <title>Ho-I-SING.62</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.sound.min.js"></script>
@@ -17,16 +17,20 @@
 </head>
 <body>    
   <div class="UI">
-    <a href="../ThiannThangLi/index.html"><div class="pop_next"><svg viewBox="0 0 180 180">
-      <path class="st0"
-          d="M88.5,13.6c41.3,0,74.9,33.6,74.9,74.9s-33.6,74.9-74.9,74.9s-74.9-33.6-74.9-74.9S47.2,13.6,88.5,13.6
-               M88.5,4.1C41.9,4.1,4.1,41.9,4.1,88.5s37.8,84.4,84.4,84.4s84.4-37.8,84.4-84.4S135.1,4.1,88.5,4.1L88.5,4.1z" />
-      <g>
+    <a href="../ThiannThangLi/index.html">
+      <div class="pop_next">
+        <svg viewBox="0 0 180 180">
           <path class="st0"
-              d="M74.2,123.3c-1.4,0-2.9-0.7-3.8-1.9c-1.6-2.1-1.2-5.1,0.9-6.7L106,88.5L71.3,62.3c-2.1-1.6-2.5-4.6-0.9-6.7
-                  c1.6-2.1,4.6-2.5,6.7-0.9l39.8,30c1.2,0.9,1.9,2.3,1.9,3.8s-0.7,2.9-1.9,3.8l-39.8,30C76.2,123,75.2,123.3,74.2,123.3z" />
-      </g>
-  </svg></div></a>
+            d="M88.5,13.6c41.3,0,74.9,33.6,74.9,74.9s-33.6,74.9-74.9,74.9s-74.9-33.6-74.9-74.9S47.2,13.6,88.5,13.6
+               M88.5,4.1C41.9,4.1,4.1,41.9,4.1,88.5s37.8,84.4,84.4,84.4s84.4-37.8,84.4-84.4S135.1,4.1,88.5,4.1L88.5,4.1z" />
+          <g>
+          <path class="st0"
+            d="M74.2,123.3c-1.4,0-2.9-0.7-3.8-1.9c-1.6-2.1-1.2-5.1,0.9-6.7L106,88.5L71.3,62.3c-2.1-1.6-2.5-4.6-0.9-6.7
+              c1.6-2.1,4.6-2.5,6.7-0.9l39.8,30c1.2,0.9,1.9,2.3,1.9,3.8s-0.7,2.9-1.9,3.8l-39.8,30C76.2,123,75.2,123.3,74.2,123.3z" />
+          </g>
+        </svg>
+      </div>
+    </a>
   </div>
 <script>
 
@@ -141,30 +145,31 @@ var path;
 //key'a''s'
   function keyTyped(){
       if(key === 'q'){
+        count=count+1;
         a = random(20,60);
         texts_01.push(new Text17(random(a*2.5,windowWidth-a*2.5),random(0,100),a*5,a));  
         sound_Q.playMode('restart'); 
-        sound_Q.play();
-        count=count+1;     
+        sound_Q.play();  
       }else if (key === 'w'){
+        count=count+1;
         a = random(20,60);
         texts_01.push(new Text23(random(a*2,windowWidth-a*2),random(0,100),a*4,a));
         sound_W.playMode('restart'); 
         sound_W.play();
-        count=count+1;
       }else if (key === 'e'){
+        count=count+1;
         a = random(20,60);
         texts_01.push(new Text5(random(a*2,windowWidth-a*2),random(0,100),a*4,a));
         sound_E.playMode('restart'); 
         sound_E.play();
-        count=count+1;
       }else if (key === 'r'){
+        count=count+1;
         a = random(20,60);
         texts_01.push(new Text18(random(a*3,windowWidth-a*3),random(0,100),a*6,a));
         sound_R.playMode('restart'); 
         sound_R.play();
-        count=count+1;
       }else if (key === 't'){
+        count=count+1;
         a = random(20,60);
         texts_01.push(new Text20(random(a*2.5,windowWidth-a*2.5),random(0,100),a*5,a));
         sound_A.stop();
@@ -192,133 +197,132 @@ var path;
         sound_X.stop();
         sound_Y.stop();
         sound_Z.stop();
-        count=count+1;
       }else if (key === 'y'){
+        count=count+1;
         a = random(20,60);
         texts_01.push(new Text25(random(a,windowWidth-a),random(0,100),a*2,a));
         sound_Y.playMode('restart'); 
         sound_Y.play();
-        count=count+1;
       }else if (key === 'u'){
+        count=count+1;
         a = random(20,60);
         texts_01.push(new Text21(random(a*2,windowWidth-a*2),random(0,100),a*4,a));
         sound_U.playMode('restart'); 
         sound_U.play();
-        count=count+1;
       }else if (key === 'i'){
+        count=count+1;
         a = random(20,60);
         texts_01.push(new Text9(random(a*2.5,windowWidth-a*2.5),random(0,100),a*5,a));
         sound_I.playMode('restart'); 
         sound_I.play();
-        count=count+1;
       }else if (key === 'o'){
+        count=count+1;
         a = random(20,60);
         texts_01.push(new Text15(random(a/2,windowWidth-a/2),random(0,100),a,a));
         sound_O.playMode('restart'); 
         sound_O.play();
-        count=count+1;
       }else if (key === 'p'){
+        count=count+1;
         a = random(20,60);
         texts_01.push(new Text16(random(a,windowWidth-a),random(0,100),a*2,a));
         sound_P.playMode('restart'); 
         sound_P.play();
-        count=count+1;
       }else if (key === 'a'){
+        count=count+1;
         a = random(20,60);
         texts_01.push(new Text1(random(a*1.5,windowWidth-a*1.5),random(0,100),a*3,a));
         sound_A.playMode('restart'); 
         sound_A.play();
-        count=count+1;
       }else if (key === 's'){
+        count=count+1;
         a = random(20,60);
         texts_01.push(new Text19(random(a*1.5,windowWidth-a*1.5),random(0,100),a*3,a));
         sound_S.playMode('restart'); 
         sound_S.play();
-        count=count+1;
       }else if (key === 'd'){
+        count=count+1;
         a = random(20,60);
         texts_01.push(new Text4(random(a,windowWidth-a),random(0,100),a*2,a));
         sound_D.playMode('restart'); 
         sound_D.play();
-        count=count+1;
       }else if (key === 'f'){
+        count=count+1;
         a = random(20,60);
         texts_01.push(new Text6(random(a*2.5,windowWidth-a*2.5),random(0,100),a*5,a));
         sound_F.playMode('restart'); 
         sound_F.play();
-        count=count+1;
       }else if (key === 'g'){
+        count=count+1;
         a = random(20,60);
         texts_01.push(new Text7(random(a,windowWidth-a),random(0,100),a*2,a));
         sound_G.playMode('restart'); 
         sound_G.play();
-        count=count+1;
       }else if (key === 'h'){
+        count=count+1;
         a = random(20,60);
         texts_01.push(new Text8(random(a,windowWidth-a),random(0,100),a*2,a));
         sound_H.playMode('restart'); 
         sound_H.play();
-        count=count+1;
       }else if (key === 'j'){
+        count=count+1;
         a = random(20,60);
         texts_01.push(new Text10(random(a*2,windowWidth-a*2),random(0,100),a*4,a));
         sound_J.playMode('restart'); 
         sound_J.play();
-        count=count+1;
       }else if (key === 'k'){
+        count=count+1;
         a = random(20,60);
         texts_01.push(new Text11(random(a*2,windowWidth-a*2),random(0,100),a*4,a));
         sound_K.playMode('restart'); 
         sound_K.play();
-        count=count+1;
       }else if (key === 'l'){
+        count=count+1;
         a = random(20,60);
         texts_01.push(new Text12(random(a*2.5,windowWidth-a*2.5),random(0,100),a*5,a));
         sound_L.playMode('restart'); 
         sound_L.play();
-        count=count+1;
       }else if (key === 'z'){
+        count=count+1;
         a = random(20,60);
         texts_01.push(new Text26(random(a*3.5,windowWidth-a*3.5),random(0,100),a*7,a));
         sound_Z.playMode('restart'); 
         sound_Z.play();
-        count=count+1;
       }else if (key === 'x'){
+        count=count+1;
         a = random(20,60);
         texts_01.push(new Text24(random(a,windowWidth-a),random(0,100),a*2,a));
         sound_X.playMode('restart'); 
         sound_X.play();
-        count=count+1;
       }else if (key === 'c'){
+        count=count+1;
         a = random(20,60);
         texts_01.push(new Text3(random(a*1.5,windowWidth-a*1.5),random(0,100),a*3,a));
         sound_C.playMode('restart'); 
         sound_C.play();
-        count=count+1;
       }else if (key === 'v'){
+        count=count+1;
         a = random(20,60);
         texts_01.push(new Text22(random(a*2.5,windowWidth-a*2.5),random(0,100),a*5,a));
         sound_V.playMode('restart'); 
         sound_V.play();
-        count=count+1;
       }else if (key === 'b'){
+        count=count+1;
         a = random(20,60);
         texts_01.push(new Text2(random(a*4,windowWidth-a*4),random(0,100),a*8,a));
         sound_B.playMode('restart'); 
         sound_B.play();
-        count=count+1;
       }else if (key === 'n'){
+        count=count+1;
         a = random(20,60);
         texts_01.push(new Text14(random(a,windowWidth-a),random(0,100),a*2,a));
         sound_N.playMode('restart'); 
         sound_N.play();
-        count=count+1;
       }else if (key === 'm'){
+        count=count+1;
         a = random(20,60);
         texts_01.push(new Text13(random(a*2,windowWidth-a*2),random(0,100),a*4,a));
         sound_M.playMode('restart'); 
         sound_M.play();
-        count=count+1;
       }
       console.log(count);
   }
@@ -350,7 +354,7 @@ var path;
     tint(255, UIfade);
     image(UIimg,windowWidth/2,windowHeight/6);
     
-    if(count>15){
+    if(count>1){
       UIfadeAmount=5;
       next.addClass('fadeIn');
     }
