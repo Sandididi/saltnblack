@@ -354,9 +354,11 @@ var path;
     tint(255, UIfade);
     image(UIimg,windowWidth/2,windowHeight/6);
     
-    if(count>1){
-      UIfadeAmount=5;
+    if(count>0){
       next.addClass('fadeIn');
+    }
+    if(count>4){
+      UIfadeAmount=10;
     }
     UIfade-=UIfadeAmount;
     pop();
